@@ -6,7 +6,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #0b6c6c;
+    background-color: #05124f;
     position: fixed;
     left: 0;
     top: 0;
@@ -14,26 +14,26 @@
     font-weight: bold;
     font-size: 16px;
     font-style: normal;
-    text-align: left;
+    text-align: right;
 }
 
-    li {
-        display: inline-block;
-        background-color: #0b6c6c;
-        margin: 0;
-        padding: 0;
-    }
+li {
+    display: inline-block;
+    background-color: #05124f;
+    margin: 0;
+    padding: 0;
+}
 
     li a, .dropbtn {
         display: inline-block;
         color: white;
-        text-align: left;
+        text-align: right;
         padding: 14px 16px;
         text-decoration: none;
     }
 
         li a:hover, .dropdown:hover .dropbtn {
-            background-color: midnightblue;
+            background-color: darkslateblue;
             border-radius: 5px;
         }
 

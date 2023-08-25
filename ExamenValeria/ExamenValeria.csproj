@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Base de datos\Encuestas.sql" />
     <Content Include="Base de datos\EncuestaUH.sql" />
     <Content Include="Encuesta.aspx" />
     <Content Include="Estilos\Botones.css" />
@@ -74,6 +75,9 @@
     <Content Include="Estilos\Estilos2.css" />
     <Content Include="Estilos\Menu.css" />
     <Content Include="Estilos\tabla.css" />
+    <Content Include="Imagenes\fondocinta.jpg" />
+    <Content Include="Imagenes\fondocinta2.jpg" />
+    <Content Include="Imagenes\fondoCR.jpg" />
     <Content Include="Reportes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>

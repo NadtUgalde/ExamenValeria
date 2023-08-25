@@ -39,7 +39,7 @@ namespace ExamenValeria
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList tgenero;
+        protected global::System.Web.UI.WebControls.RadioButtonList tgenero;
 
         /// <summary>
         /// Control tedad.
@@ -84,7 +84,7 @@ namespace ExamenValeria
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList tpartido;
+        protected global::System.Web.UI.WebControls.RadioButtonList tpartido;
 
         /// <summary>
         /// Control BAgregar.

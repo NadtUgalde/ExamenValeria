@@ -5,9 +5,9 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="contenedor1">
+    <div class="contenedor1" style="background-color: #ffffff9d">
         <div>
-            <label for="Numero" >Numero:</label>
+            <label for="Numero"  >Numero:</label>
             <asp:TextBox ID="tnumero" runat="server" OnTextChanged="tnumero_TextChanged1"></asp:TextBox>
              </div>
          <div>
@@ -20,7 +20,7 @@
         <div class="button-container">
             <asp:Button ID="Bconsultar" CssClass="button button1" runat="server" Text="Consultar" OnClick="Bconsultar_Click" />
         </div>
-        </div>
+       
      <div class="button-container">
             <asp:Button ID="Bborrar" CssClass="button button1" runat="server" Text="Borrar" OnClick="Bborrar_Click" />
         </div>
@@ -51,10 +51,11 @@
                 </asp:Repeater>
             </thead>--%>
              <%--</table>
-    </div--%>&nbsp;<div class="datagrid"><h2 align="center">Encuestas</h2>
-                <table id="listadeformularios" align="center" style="border: thin solid #666666; background-color: #2c2d2f; background-repeat: inherit; border-radius: 4px">
+    </div--%>&nbsp;<div class="h2"><h2 align="center" >Encuestas</h2></div>
+
+               <div class="datagrid"> <table id="listadeformularios" align="center" >
          
-                    <thead><tr>
+                    <thead ><tr>
                      <th >Numero</th>
                     <th >Nombre</th>
                     <th >Genero</th>
@@ -72,13 +73,15 @@
                             <td><%# Eval("Correo") %></td>
                             <td><%# Eval("Partido") %></td>
                         </tr>
+                        
+                         
                 </ItemTemplate>
                 </asp:Repeater>
                     </table>
 
              </div>
 
-     <div class="footer">
+     <div class="footer" >
         Copyright &copy; Valeria Ugalde- Todos los derechos 2023
     </div>
 </asp:Content>

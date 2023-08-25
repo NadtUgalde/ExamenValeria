@@ -59,6 +59,11 @@ namespace ExamenValeria
 
         }
 
+        protected void tgenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
        
     }
 }

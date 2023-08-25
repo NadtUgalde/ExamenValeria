@@ -2,13 +2,14 @@
     display: flex; /* Mostrar botones en fila */
     justify-content: center; /* Centrar botones horizontalmente */
     gap: 10px; /* Espacio entre botones */
-    margin-bottom: 20px; /* Espacio inferior */
+    /* margin-bottom: 20px; Espacio inferior */
+    margin: 30px
 }
 
 /* Estilos de los botones */
 .button {
     flex: 0; 
-    padding: 8px 0; /* Espaciado vertical */
+    padding: 15px; /* Espaciado vertical */
     font-size: 14px;
     border: none;
     border-radius: 4px;
