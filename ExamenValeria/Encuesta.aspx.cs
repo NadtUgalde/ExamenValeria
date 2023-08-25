@@ -1,5 +1,7 @@
 ﻿using System;
+using ExamenValeria.Clases;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,34 +11,7 @@ namespace ExamenValeria
 {
     public partial class Encuesta : System.Web.UI.Page
     {
-        List<ClsCliente> clientes = ClsCliente.ObtenerClientes();
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                CargarClientes();
-            }
-            else
-            {
-
-            }
-        }
-        private void LimpiarTabla()
-        {
-            clientes.Clear();
-            repeaterClientes.DataSource = null;
-            repeaterClientes.DataBind();
-        }
-
-        private void CargarClientes()
-        {
-            LimpiarTabla();
-            clientes = ClsCliente.ObtenerClientes();
-            repeaterClientes.DataSource = clientes;
-            repeaterClientes.DataBind();
-        }
-
+        List<ClsFormularios> formularios = ClsFormularios.ObtenerEncuestas ();
         public void alertas(String texto)
         {
             string message = texto;
@@ -54,70 +29,36 @@ namespace ExamenValeria
         public void LimpiarCampos()
         {
             tnombre.Text = string.Empty;
-            tdireccion.Text = string.Empty;
-            ttelefono.Text = string.Empty;
+            
+            
+            tcorreo.Text = string.Empty;
+            
         }
         protected void BAgregar_Click(object sender, EventArgs e)
         {
-            int resultado = ClsCliente.AgregarClientes(tnombre.Text, tdireccion.Text, ttelefono.Text);
-
-            if (resultado > 0)
-            {
-                alertas("Usuario ha sido ingresado con exito");
-                LimpiarCampos();
-                CargarClientes();
-            }
-            else
-            {
-                alertas("Error al ingresar Usuario");
-            }
-
-
-        }
-
-        protected void BBorrar_Click(object sender, EventArgs e)
-
-        {
-            String codigo = tcodigo.Text.Trim();
-            int resultado = ClsCliente.BorrarClientes(codigo);
-
-            if (resultado > 0)
-            {
-                alertas("Usuario ha sido borrado con exito");
-                LimpiarCampos();
-                CargarClientes();
-            }
-            else
-            {
-                alertas("Error al ingresar Usuario");
-            }
-        }
-
-        protected void BModificar_Click(object sender, EventArgs e)
-        {
-            String codigo = tcodigo.Text;
-            String nombre = tnombre.Text;
-            String direccion = tdireccion.Text;
-            String telefono = ttelefono.Text;
-            int resultado = ClsCliente.ModificarClientes(codigo, nombre, direccion, telefono);
+            int resultado = ClsFormularios.AgregarEncuestas(tnombre.Text, tgenero.Text , tedad.Text, tcorreo.Text,tpartido.Text);
 
             if (IsValid)
             {
                 if (resultado > 0)
                 {
-                    alertas("Usuario ha sido modificado con exito");
+                    alertas("Encuesta ha sido ingresada con éxito");
                     LimpiarCampos();
-                    CargarClientes();
+                  
                 }
                 else
                 {
-                    alertas("Error al ingresar Usuario");
+                    alertas("Error al ingresar Encuesta");
                 }
             }
+
         }
-        protected void tnombre_TextChanged(object sender, EventArgs e)
+
+        protected void tnombre_TextChanged1(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }

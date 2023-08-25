@@ -11,7 +11,7 @@ namespace ExamenValeria
 {
 
 
-    public partial class Site1
+    public partial class Menu
     {
 
         /// <summary>

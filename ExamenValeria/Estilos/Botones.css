@@ -1,0 +1,28 @@
+﻿.button-container {
+    display: flex; /* Mostrar botones en fila */
+    justify-content: center; /* Centrar botones horizontalmente */
+    gap: 10px; /* Espacio entre botones */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos de los botones */
+.button {
+    flex: 0; 
+    padding: 8px 0; /* Espaciado vertical */
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.button:hover {
+    background-color: #555555;
+    color: white;
+}
