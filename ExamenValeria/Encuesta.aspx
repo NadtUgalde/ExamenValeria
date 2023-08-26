@@ -17,8 +17,8 @@
         </div>
          <div>
             <label for="Genero">
-             <br />
-             Genero:</label><asp:RadioButtonList ID="tgenero" runat="server" OnSelectedIndexChanged="tgenero_SelectedIndexChanged" Width="138px">
+             <br/>
+             Genero:</label><asp:RadioButtonList ID="tg" runat="server" Width="113px">
                  <asp:ListItem>Femenino</asp:ListItem>
                  <asp:ListItem>Masculino</asp:ListItem>
              </asp:RadioButtonList>
@@ -40,7 +40,7 @@
             <label for="Partido">
              <br />
              <br />
-             Partido Político:</label><asp:RadioButtonList ID="tpartido" runat="server">
+             Partido Político:</label><asp:RadioButtonList ID="tp" runat="server" Height="177px" Width="54px">
                  <asp:ListItem>PLN</asp:ListItem>
                  <asp:ListItem>PUSC</asp:ListItem>
                  <asp:ListItem>PAC</asp:ListItem>

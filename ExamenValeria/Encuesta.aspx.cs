@@ -36,7 +36,7 @@ namespace ExamenValeria
         }
         protected void BAgregar_Click(object sender, EventArgs e)
         {
-            int resultado = ClsFormularios.AgregarEncuestas(tnombre.Text, tgenero.Text , tedad.Text, tcorreo.Text,tpartido.Text);
+            int resultado = ClsFormularios.AgregarEncuestas(tnombre.Text, tg.Text , tedad.Text, tcorreo.Text,tp.Text);
 
             if (IsValid)
             {
@@ -64,6 +64,9 @@ namespace ExamenValeria
 
         }
 
-       
+        protected void tgenero_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

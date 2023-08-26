@@ -11,12 +11,14 @@ namespace ExamenValeria
     public partial class Reportes : System.Web.UI.Page
     {
         List<ClsFormularios> formularios = ClsFormularios.ObtenerEncuestas();
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (!IsPostBack)
             {
                 CargarEncuestas();
+              
             }
             else
             {
@@ -30,26 +32,7 @@ namespace ExamenValeria
             repeaterEncuestas.DataBind();
         }
 
-        public void alertas(String texto)
-        {
-            string message = texto;
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            sb.Append("<script type = 'text/javascript'>");
-            sb.Append("window.onload=function(){");
-            sb.Append("alert('");
-            sb.Append(message);
-            sb.Append("')};");
-            sb.Append("</script>");
-            ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", sb.ToString());
-
-        }
-
-        public void LimpiarCampos()
-        {
-            tnumero.Text = string.Empty;
-            tgenero.Text = string.Empty;
-        
-        }
+            
         private void CargarEncuestas()
         {
             LimpiarTabla();
@@ -57,36 +40,42 @@ namespace ExamenValeria
             repeaterEncuestas.DataSource = formularios;
             repeaterEncuestas.DataBind();
         }
+
+
+
+        //Metodos de reportes
+        static List<ClsReportes> reportes = new List<ClsReportes>();
+
+        private void LimpiarTablaReportes()
+        {
+            reportes.Clear();
+            repeaterEncuestas.DataSource = null;
+            repeaterEncuestas.DataBind();
+        }
         protected void Bconsultar_Click(object sender, EventArgs e)
         {
-            String numero = tnumero.Text.Trim();
-            int resultado = ClsFormularios.BorrarEncuesta(numero);
+            consultarReportes();
+
         }
-
-        protected void Bborrar_Click(object sender, EventArgs e)
-
+        public void LimpiarCamposReportes()
         {
-            String numero = tnumero.Text.Trim();
-            int resultado = ClsFormularios.BorrarEncuesta(numero);
+            treporte.Text = string.Empty;
 
-            if (resultado > 0)
-            {
-                alertas("Encuesta ha sido borrada con éxito");
-                LimpiarCampos();
-                CargarEncuestas();
-            }
-            else
-            {
-                alertas("Error al borrar encuesta");
-            }
         }
 
-        protected void tnumero_TextChanged1(object sender, EventArgs e)
+        public void consultarReportes()
         {
-
+            LimpiarTablaReportes();
+            reportes = ClsReportes.ObtenerReportes(treporte.Text);
+            repeaterReportes.DataSource = reportes;
+            repeaterReportes.DataBind();
         }
 
-       
+        protected void treporte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            consultarReportes();
+            CargarEncuestas();
+        }
     }
 
 

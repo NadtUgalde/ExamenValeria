@@ -33,13 +33,13 @@ namespace ExamenValeria
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
-        /// Control tgenero.
+        /// Control tg.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList tgenero;
+        protected global::System.Web.UI.WebControls.RadioButtonList tg;
 
         /// <summary>
         /// Control tedad.
@@ -78,13 +78,13 @@ namespace ExamenValeria
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
 
         /// <summary>
-        /// Control tpartido.
+        /// Control tp.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList tpartido;
+        protected global::System.Web.UI.WebControls.RadioButtonList tp;
 
         /// <summary>
         /// Control BAgregar.

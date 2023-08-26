@@ -70,43 +70,11 @@ namespace ExamenValeria.Clases
 
             return retorno;
         }
-        public static int BorrarEncuesta(string numero)
-        {
-            int retorno = 0;
-            tipoOperacion = 2;
-            SqlConnection Conn = new SqlConnection();
-            try
-            {
-                using (Conn = Clases.ClsConexion.obtenerConexion())
-                {
-                    SqlCommand cmd = new SqlCommand("Sp_Encuestas", Conn)
-                    {
-                        CommandType = CommandType.StoredProcedure
-                    };
-                    cmd.Parameters.Add(new SqlParameter("@Operacion", tipoOperacion));
-                    cmd.Parameters.Add(new SqlParameter("@Numero", numero));
-
-
-                    retorno = cmd.ExecuteNonQuery();
-                }
-            }
-            catch (System.Data.SqlClient.SqlException ex)
-            {
-                retorno = -1;
-            }
-            finally
-            {
-                Conn.Close();
-            }
-
-            return retorno;
-        }
-
-
+       
         public static List<ClsFormularios> ObtenerEncuestas()
         {
             int retorno = 0;
-            tipoOperacion = 4;
+            tipoOperacion = 3;
             SqlConnection Conn = new SqlConnection();
 
             try
@@ -150,6 +118,7 @@ namespace ExamenValeria.Clases
             return formularios;
         }
 
+        
 
     }
 }

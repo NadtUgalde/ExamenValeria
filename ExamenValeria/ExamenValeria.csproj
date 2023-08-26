@@ -67,7 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Base de datos\Encuestas.sql" />
     <Content Include="Base de datos\EncuestaUH.sql" />
     <Content Include="Encuesta.aspx" />
     <Content Include="Estilos\Botones.css" />

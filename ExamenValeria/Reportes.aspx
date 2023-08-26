@@ -7,51 +7,44 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="contenedor1" style="background-color: #ffffff9d">
         <div>
-            <label for="Numero"  >Numero:</label>
-            <asp:TextBox ID="tnumero" runat="server" OnTextChanged="tnumero_TextChanged1"></asp:TextBox>
+            <label for="Numero"  >Reportes:</label>
+            <asp:RadioButtonList ID="treporte" runat="server" AutoPostBack="True" OnSelectedIndexChanged="treporte_SelectedIndexChanged">
+                <asp:ListItem Value="T">Cantidad Encuestas Total</asp:ListItem>
+                <asp:ListItem Value="M">Cantidad Encuestas Masculinas</asp:ListItem>
+                <asp:ListItem Value="F">Cantidad Encuestas Femeninas</asp:ListItem>
+            </asp:RadioButtonList>
              </div>
-         <div>
-            <label for="Genero">Genero:</label>&nbsp;<asp:DropDownList ID="tgenero" runat="server" >
-                 <asp:ListItem>Femenino</asp:ListItem>
-                 <asp:ListItem>Masculino</asp:ListItem>
-             </asp:DropDownList>
-        </div>
     
         <div class="button-container">
             <asp:Button ID="Bconsultar" CssClass="button button1" runat="server" Text="Consultar" OnClick="Bconsultar_Click" />
         </div>
        
      <div class="button-container">
-            <asp:Button ID="Bborrar" CssClass="button button1" runat="server" Text="Borrar" OnClick="Bborrar_Click" />
         </div>
         </div>
-    <%--<div cssclass="rigth">
-        <h2 align="center">Encuestas</h2>
-        <table id="listadeformularios" align="center" style="border: thin solid #666666; background-color: #2c2d2f; background-repeat: inherit; border-radius: 4px">
-            <%--<thead cssclass="table">
-                <tr>
-                    <th class="auto-style1">Numero</th>
-                    <th class="auto-style1">Nombre</th>
-                    <th class="auto-style1">Genero</th>
-                    <th class="auto-style1">Edad</th>
-                    <th class="auto-style1">Correo</th>
-                    <th class="auto-style1">Partido</th>
-                </tr>
-                <asp:Repeater runat="server" ID="repeaterEncuestas">
+   <div class="h2"><h2 align="center" >Reportes</h2></div>
+
+               <div class="datagrid"> <table id="listadeencuestas" align="center" >
+         
+                    <thead ><tr>
+                     <th >Reporte</th>
+                     <th >Cantidad</th>                
+                        </tr></thead>
+                    <asp:Repeater runat="server" ID="repeaterReportes">
                     <ItemTemplate>
                         <tr>
-                            <td><%# Eval("Numero") %></td>
-                            <td><%# Eval("Nombre") %></td>
-                            <td><%# Eval("Genero") %></td>
-                            <td><%# Eval("Edad") %></td>
-                            <td><%# Eval("Correo") %></td>
-                            <td><%# Eval("Partido") %></td>
+                            <td><%# Eval("reporte") %></td>  
+                            <td><%# Eval("cantidad") %></td>               
                         </tr>
+                                                 
                 </ItemTemplate>
                 </asp:Repeater>
-            </thead>--%>
-             <%--</table>
-    </div--%>&nbsp;<div class="h2"><h2 align="center" >Encuestas</h2></div>
+                    </table>
+
+             </div>
+    
+    
+    <div class="h2"><h2 align="center" >Encuestas</h2></div>
 
                <div class="datagrid"> <table id="listadeformularios" align="center" >
          

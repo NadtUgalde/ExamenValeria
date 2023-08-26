@@ -15,22 +15,13 @@ namespace ExamenValeria
     {
 
         /// <summary>
-        /// Control tnumero.
+        /// Control treporte.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tnumero;
-
-        /// <summary>
-        /// Control tgenero.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList tgenero;
+        protected global::System.Web.UI.WebControls.RadioButtonList treporte;
 
         /// <summary>
         /// Control Bconsultar.
@@ -42,13 +33,13 @@ namespace ExamenValeria
         protected global::System.Web.UI.WebControls.Button Bconsultar;
 
         /// <summary>
-        /// Control Bborrar.
+        /// Control repeaterReportes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Bborrar;
+        protected global::System.Web.UI.WebControls.Repeater repeaterReportes;
 
         /// <summary>
         /// Control repeaterEncuestas.
