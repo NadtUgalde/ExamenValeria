@@ -52,11 +52,7 @@ namespace ExamenValeria
             repeaterEncuestas.DataSource = null;
             repeaterEncuestas.DataBind();
         }
-        protected void Bconsultar_Click(object sender, EventArgs e)
-        {
-            consultarReportes();
-
-        }
+        
         public void LimpiarCamposReportes()
         {
             treporte.Text = string.Empty;

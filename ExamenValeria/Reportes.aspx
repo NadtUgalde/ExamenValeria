@@ -16,7 +16,6 @@
              </div>
     
         <div class="button-container">
-            <asp:Button ID="Bconsultar" CssClass="button button1" runat="server" Text="Consultar" OnClick="Bconsultar_Click" />
         </div>
        
      <div class="button-container">
@@ -42,7 +41,9 @@
                     </table>
 
              </div>
-    
+
+    <div class="button-container">
+        </div>
     
     <div class="h2"><h2 align="center" >Encuestas</h2></div>
 
